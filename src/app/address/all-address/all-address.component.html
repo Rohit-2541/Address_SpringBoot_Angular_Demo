@@ -1,0 +1,20 @@
+<h2>All Addresses</h2>
+<hr>
+<table id = "address">
+    <tr>
+        <th>Address ID</th>
+        <th>Building Name</th>
+        <th>City</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let address of alladdresses">
+        <td>{{address.addressId}}</td>
+        <td>{{address.buildingName}}</td>
+        <td>{{address.city}}</td>
+        <td>
+            <button (click)="addressDetails(address.addressId)">Details</button>
+            <button (click)="updateaddress(address.addressId)">Update</button>
+            <button (click)="deleteAddress(address.addressId)">Delete</button>
+        </td>
+    </tr>
+</table>
